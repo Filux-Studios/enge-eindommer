@@ -1,0 +1,22 @@
+/* Stil for header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Stil for eiendomsbeholder */
+#properties {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.property {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Legg til flere stiler etter behov */
