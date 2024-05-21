@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EngE Eiendommer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>EngE Eiendommer</h1>
+  </header>
+
+  <main>
+    <div id="filter">
+      <label for="property-type">Eiendomstype:</label>
+      <select id="property-type">
+        <option value="all">Alle</option>
+        <option value="house">Hus</option>
+        <option value="apartment">Leilighet</option>
+        <!-- Legg til flere eiendomstyper etter behov -->
+      </select>
+    </div>
+
+    <div id="properties">
+      <!-- Eiendommer vil bli lagt til her dynamisk -->
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
