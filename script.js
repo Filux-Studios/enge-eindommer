@@ -1,31 +1,35 @@
+// Funksjon for å vise spesifikke sider
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => {
+    page.style.display = 'none';
+  });
+  document.getElementById(pageId).style.display = 'block';
+}
+
 // Dummy data for eiendommer
 const properties = [
-  { type: 'house', name: 'Vakker Villa', price: 2500000 },
-  { type: 'apartment', name: 'Sentral Leilighet', price: 1500000 },
-  // Legg til flere eiendommer etter behov
+  { title: 'Vakker Villa', price: '2 500 000 NOK', location: 'Oslo' },
+  { title: 'Sentral Leilighet', price: '1 500 000 NOK', location: 'Bergen' },
+  { title: 'Landlig Hus', price: '3 000 000 NOK', location: 'Trondheim' }
 ];
 
-// Funksjon for å vise eiendommer basert på valgt type
-function showProperties(type) {
+// Funksjon for å vise eiendomsannonser
+function showProperties() {
   const propertiesContainer = document.getElementById('properties');
   propertiesContainer.innerHTML = '';
 
-  properties.filter(property => type === 'all' || property.type === type)
-            .forEach(property => {
-              const propertyElement = document.createElement('div');
-              propertyElement.classList.add('property');
-              propertyElement.innerHTML = `<h2>${property.name}</h2><p>Pris: ${property.price}</p>`;
-              propertiesContainer.appendChild(propertyElement);
-            });
+  properties.forEach(property => {
+    const propertyElement = document.createElement('div');
+    propertyElement.classList.add('property');
+    propertyElement.innerHTML = `
+      <h2>${property.title}</h2>
+      <p>Pris: ${property.price}</p>
+      <p>Beliggenhet: ${property.location}</p>
+    `;
+    propertiesContainer.appendChild(propertyElement);
+  });
 }
 
-// Hent select-elementet
-const propertyTypeSelect = document.getElementById('property-type');
-
-// Lytt etter endringer i select-elementet
-propertyTypeSelect.addEventListener('change', () => {
-  showProperties(propertyTypeSelect.value);
-});
-
-// Vis alle eiendommer ved lasting av siden
-showProperties('all');
+// Vis eiendomsannonser ved lasting av siden
+showProperties();
