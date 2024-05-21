@@ -1,22 +1,68 @@
+/* Farger */
+:root {
+  --color1: #366aac;
+  --color2: #6089bc;
+  --color3: #8aa9cc;
+  --color4: #b5c9dc;
+}
+
 /* Stil for header */
 header {
-  background-color: #333;
+  background-color: var(--color1);
   color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-/* Stil for eiendomsbeholder */
+/* Stil for navigasjon */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Stil for sider */
+.page {
+  padding: 20px;
+}
+
 #properties {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .property {
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid var(--color2);
+  border-radius: 10px;
+  background-color: var(--color4);
+}
+
+.property h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.property p {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 /* Legg til flere stiler etter behov */
