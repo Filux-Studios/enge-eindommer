@@ -32,4 +32,4 @@ function showProperties() {
 }
 
 // Vis eiendomsannonser ved lasting av siden
-showProperties();
+document.addEventListener('DOMContentLoaded', showProperties);
