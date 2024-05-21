@@ -8,23 +8,36 @@
 </head>
 <body>
   <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showPage('home')">Hjem</a></li>
+        <li><a href="#" onclick="showPage('about')">Om oss</a></li>
+        <li><a href="#" onclick="showPage('contact')">Kontakt</a></li>
+      </ul>
+    </nav>
     <h1>EngE Eiendommer</h1>
   </header>
 
   <main>
-    <div id="filter">
-      <label for="property-type">Eiendomstype:</label>
-      <select id="property-type">
-        <option value="all">Alle</option>
-        <option value="house">Hus</option>
-        <option value="apartment">Leilighet</option>
-        <!-- Legg til flere eiendomstyper etter behov -->
-      </select>
-    </div>
-
-    <div id="properties">
-      <!-- Eiendommer vil bli lagt til her dynamisk -->
-    </div>
+    <section id="home" class="page">
+      <h2>Velkommen til EngE Eiendommer</h2>
+      <div id="properties">
+        <!-- Eiendomsannonser vil bli lagt til her dynamisk -->
+      </div>
+    </section>
+    <section id="about" class="page" style="display: none;">
+      <h2>Om oss</h2>
+      <p>EngE Eiendommer er din pålitelige partner innen kjøp og leie av eiendommer. Vi tilbyr et bredt spekter av eiendommer som passer dine behov.</p>
+    </section>
+    <section id="contact" class="page" style="display: none;">
+      <h2>Kontakt oss</h2>
+      <p>Du kan kontakte oss på følgende måter:</p>
+      <ul>
+        <li>Telefon: +47 123 456 789</li>
+        <li>E-post: post@engeeiendommer.no</li>
+        <li>Adresse: Hovedgata 1, 0123 Oslo, Norge</li>
+      </ul>
+    </section>
   </main>
 
   <script src="scripts.js"></script>
